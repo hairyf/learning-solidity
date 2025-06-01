@@ -5,6 +5,11 @@
   "description": "A collection of Solidity learning resources and examples",
   "author": "Hairy <wwu710632@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "test": "hardhat test",
+    "test:solidity": "hardhat test solidity",
+    "test:node": "hardhat test node"
+  },
   "dependencies": {
     "@openzeppelin/contracts": "catalog:contracts",
     "@openzeppelin/contracts-upgradeable": "catalog:contracts",
