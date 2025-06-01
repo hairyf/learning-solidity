@@ -1,0 +1,40 @@
+{
+  "name": "learning-solidity",
+  "type": "module",
+  "packageManager": "pnpm@10.6.2",
+  "description": "A collection of Solidity learning resources and examples",
+  "author": "Hairy <wwu710632@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@openzeppelin/contracts": "catalog:contracts",
+    "@openzeppelin/contracts-upgradeable": "catalog:contracts",
+    "solady": "catalog:contracts"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "catalog:cli",
+    "@hairy/utils": "catalog:utils",
+    "@nomicfoundation/hardhat-ignition": "catalog:inlined",
+    "@nomicfoundation/hardhat-ignition-viem": "catalog:inlined",
+    "@nomicfoundation/hardhat-toolbox-viem": "catalog:inlined",
+    "@nomicfoundation/hardhat-viem": "catalog:inlined",
+    "@types/node": "catalog:types",
+    "eslint": "catalog:cli",
+    "etherlib-generator": "catalog:cli",
+    "ethers": "catalog:tooling",
+    "forge-std": "catalog:tooling",
+    "hardhat": "catalog:inlined",
+    "lint-staged": "catalog:cli",
+    "nanoid": "catalog:utils",
+    "nip": "catalog:cli",
+    "simple-git-hooks": "catalog:cli",
+    "tsx": "catalog:cli",
+    "typescript": "catalog:cli",
+    "viem": "catalog:tooling"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm i --frozen-lockfile --ignore-scripts --offline && npx lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  }
+}
