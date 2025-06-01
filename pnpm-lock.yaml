@@ -41,20 +41,23 @@ catalogs:
       specifier: ^0.1.19
       version: 0.1.19
   inlined:
+    '@nomicfoundation/hardhat-ethers':
+      specifier: ^4.0.0-next.13
+      version: 4.0.0-next.13
     '@nomicfoundation/hardhat-ignition':
-      specifier: 3.0.0-next.13
+      specifier: ^3.0.0-next.13
       version: 3.0.0-next.13
     '@nomicfoundation/hardhat-ignition-viem':
-      specifier: 3.0.0-next.13
+      specifier: ^3.0.0-next.13
       version: 3.0.0-next.13
     '@nomicfoundation/hardhat-toolbox-viem':
-      specifier: 4.0.0-next.13
+      specifier: ^4.0.0-next.13
       version: 4.0.0-next.13
     '@nomicfoundation/hardhat-viem':
-      specifier: 3.0.0-next.13
+      specifier: ^3.0.0-next.13
       version: 3.0.0-next.13
     hardhat:
-      specifier: 3.0.0-next.13
+      specifier: ^3.0.0-next.13
       version: 3.0.0-next.13
   tooling:
     ethers:
@@ -98,6 +101,9 @@ importers:
       '@hairy/utils':
         specifier: catalog:utils
         version: 1.30.0
+      '@nomicfoundation/hardhat-ethers':
+        specifier: catalog:inlined
+        version: 4.0.0-next.13(hardhat@3.0.0-next.13)
       '@nomicfoundation/hardhat-ignition':
         specifier: catalog:inlined
         version: 3.0.0-next.13(hardhat@3.0.0-next.13)
@@ -641,6 +647,11 @@ packages:
 
   '@nomicfoundation/hardhat-errors@3.0.0-next.13':
     resolution: {integrity: sha512-pQSISROJ3XqgwzNrl2YboGZacUM7SA8jmr39IyM20r/8OQpALKFEpAkIpMQ+vBstfxHtpjlT0/2imqCK3LMVcA==}
+
+  '@nomicfoundation/hardhat-ethers@4.0.0-next.13':
+    resolution: {integrity: sha512-Dt+Db/pz/WiTCNHcRe5SAZ7dqOjskT0YWD21LgYUtWb64z1Z+6ylSVASN1GsOn3kExn3RPXVGWG6wnuJV3dS6g==}
+    peerDependencies:
+      hardhat: ^3.0.0-next.13
 
   '@nomicfoundation/hardhat-ignition-viem@3.0.0-next.13':
     resolution: {integrity: sha512-ZSjPKqFA+EjxWDLSCIUtiv0H6hDInaDY3Gnq6+F2F/C6oLZMoXSKHkHSVII1TLZb9FTXPkH4ydc/nSIuprsP0Q==}
@@ -3614,6 +3625,18 @@ snapshots:
       '@nomicfoundation/hardhat-utils': 3.0.0-next.13
     transitivePeerDependencies:
       - supports-color
+
+  '@nomicfoundation/hardhat-ethers@4.0.0-next.13(hardhat@3.0.0-next.13)':
+    dependencies:
+      '@nomicfoundation/hardhat-errors': 3.0.0-next.13
+      '@nomicfoundation/hardhat-utils': 3.0.0-next.13
+      debug: 4.4.0
+      ethers: 6.14.3
+      hardhat: 3.0.0-next.13
+    transitivePeerDependencies:
+      - bufferutil
+      - supports-color
+      - utf-8-validate
 
   '@nomicfoundation/hardhat-ignition-viem@3.0.0-next.13(@nomicfoundation/hardhat-ignition@3.0.0-next.13(hardhat@3.0.0-next.13))(@nomicfoundation/hardhat-viem@3.0.0-next.13(hardhat@3.0.0-next.13)(viem@2.30.5(typescript@5.8.2)(zod@3.25.46)))(@nomicfoundation/ignition-core@3.0.0-next.13)(hardhat@3.0.0-next.13)(viem@2.30.5(typescript@5.8.2)(zod@3.25.46))':
     dependencies:

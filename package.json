@@ -22,6 +22,7 @@
     "@nomicfoundation/hardhat-ignition-viem": "catalog:inlined",
     "@nomicfoundation/hardhat-toolbox-viem": "catalog:inlined",
     "@nomicfoundation/hardhat-viem": "catalog:inlined",
+    "@nomicfoundation/hardhat-ethers": "catalog:inlined",
     "@types/node": "catalog:types",
     "eslint": "catalog:cli",
     "etherlib-generator": "catalog:cli",

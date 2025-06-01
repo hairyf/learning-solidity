@@ -19,11 +19,12 @@ catalogs:
     '@openzeppelin/contracts-upgradeable': ^5.3.0
     solady: ^0.1.19
   inlined:
-    '@nomicfoundation/hardhat-ignition': 3.0.0-next.13
-    '@nomicfoundation/hardhat-ignition-viem': 3.0.0-next.13
-    '@nomicfoundation/hardhat-toolbox-viem': 4.0.0-next.13
-    '@nomicfoundation/hardhat-viem': 3.0.0-next.13
-    hardhat: 3.0.0-next.13
+    '@nomicfoundation/hardhat-ignition': ^3.0.0-next.13
+    '@nomicfoundation/hardhat-ignition-viem': ^3.0.0-next.13
+    '@nomicfoundation/hardhat-toolbox-viem': ^4.0.0-next.13
+    '@nomicfoundation/hardhat-viem': ^3.0.0-next.13
+    '@nomicfoundation/hardhat-ethers': ^4.0.0-next.13
+    hardhat: ^3.0.0-next.13
   tooling:
     ethers: ^6.14.3
     forge-std: github:foundry-rs/forge-std#v1.9.4
