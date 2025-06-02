@@ -1,14 +1,15 @@
 /// <reference types="etherlib-generator/hardhat-network" />
 
 import type { HardhatUserConfig } from 'hardhat/types/config'
+import hardhatEthersPlugin from '@nomicfoundation/hardhat-ethers'
 import hardhatIgnitionViewPlugin from '@nomicfoundation/hardhat-ignition-viem'
 import hardhatToolboxViemPlugin from '@nomicfoundation/hardhat-toolbox-viem'
-import hardhatEthersPlugin from '@nomicfoundation/hardhat-ethers'
+
 const config = {
   plugins: [
     hardhatIgnitionViewPlugin,
     hardhatToolboxViemPlugin,
-    hardhatEthersPlugin
+    hardhatEthersPlugin,
   ],
   solidity: {
     profiles: {

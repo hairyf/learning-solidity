@@ -5,11 +5,11 @@ import { Strings } from "../library/Strings.sol";
 import { ECDSA } from "@openzeppelin/contracts/utils/cryptography/ECDSA.sol";
 
 /**
- * @title ERC191
+ * @title EIP191Validator
  * @dev This contract provides functions to hash and verify messages according to the ERC191 standard.
  * It allows for the recovery of the signer's address from a signed message.
  */
-contract ERC191 {
+contract EIP191Validator {
   /**
    * @dev Hashes a message according to the ERC191 standard.
    * @param _message The message to be hashed.

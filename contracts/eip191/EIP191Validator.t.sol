@@ -2,7 +2,7 @@
 pragma solidity ^0.8.0;
 
 import { Test } from "forge-std/Test.sol";
-import { ERC191 } from "./ERC191.sol";
+import { EIP191Validator } from "./EIP191Validator.sol";
 import { ECDSA } from "@openzeppelin/contracts/utils/cryptography/ECDSA.sol";
 import { Strings } from "../library/Strings.sol";
 
@@ -18,17 +18,17 @@ import { Strings } from "../library/Strings.sol";
  * 6. Compare the recovered address with the address that needs to be verified
  * 7. If they match, the signature is valid, indicating reliable information
  * 
- * This test suite demonstrates how to verify an ERC191 signature using Solidity.
+ * This test suite demonstrates how to verify an EIP191Validator signature using Solidity.
  */
-contract ERC191Test is Test {
-    ERC191 public erc191;
+contract EIP191ValidatorTest is Test {
+    EIP191Validator public erc191;
     
     // Test private key and its corresponding address
     uint256 private constant PRIVATE_KEY = 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80; // First anvil default private key
     address private constant SIGNER_ADDRESS = 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266; // Address corresponding to the private key
     
     function setUp() public {
-        erc191 = new ERC191();
+        erc191 = new EIP191Validator();
     }
     
     /**
@@ -67,7 +67,7 @@ contract ERC191Test is Test {
      * Test an invalid signature verification
      * This test demonstrates that the verification fails when using an incorrect signer address
      */
-    function testInvalidSignerAddress() public {
+    function testInvalidSignerAddress() public view {
         // 1. Define a message to sign
         string memory message = "Hello, world!";
         
@@ -118,7 +118,7 @@ contract ERC191Test is Test {
      * Test signature components manipulation
      * This test demonstrates that changing any component of the signature invalidates it
      */
-    function testSignatureComponentsManipulation() public {
+    function testSignatureComponentsManipulation() public view {
         string memory message = "Hello, world!";
         bytes32 messageHash = erc191.hashMessage(message);
         
